@@ -1,0 +1,3 @@
+[submodule "tornado-simple-app"]
+	path = tornado-simple-app
+	url = https://github.com/tetsis/tornado-simple-app.git
