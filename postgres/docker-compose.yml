@@ -1,0 +1,11 @@
+version: '3'
+services:
+  postgres:
+    build: .
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    command: 'postgres -c config_file="/etc/postgresql.conf"'
+volumes:
+  pgdata:

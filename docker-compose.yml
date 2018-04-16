@@ -10,3 +10,16 @@ services:
       - ./nginx.conf:/etc/nginx/nginx.conf
   tornado:
     build: ./tornado-simple-app
+    env_file: .tornado_env
+    environment:
+      DATABASE_HOST: postgres
+    depends_on:
+      - postgres
+  postgres:
+    build: ./postgres
+    #ports:
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    command: 'postgres -c config_file="/etc/postgresql.conf"'
+volumes:
+  pgdata:

@@ -1,0 +1,3 @@
+PG_DATABASE=tornado
+PG_USER=tornado
+PG_PASSWORD=tornado
